@@ -4,7 +4,7 @@ import Foundation
 import CoreGraphics
 
 extension CGImage {
-    func getBaseAddress() throws -> UnsafeMutablePointer<UInt8> {
+    public func getBaseAddress() throws -> UnsafeMutablePointer<UInt8> {
         guard let dataProvider = dataProvider,
             let data = dataProvider.data else {
             throw WebPError.unexpectedPointerError
